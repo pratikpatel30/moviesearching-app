@@ -8,7 +8,7 @@ import MovieCard from './assets/components/MovieCard'
 
 function App() {
     //crete three state
-    const [allMovieData, setAllMovieData] = useState9([]);
+    const [allMovieData, setAllMovieData] = useState([]);
     const [searchMovie, setSearchMovie] = useState('');
     const [loading, setLoading] = useState(false);
     
@@ -31,8 +31,8 @@ function App() {
       <div>
         <Navbar/>
         <div className='bg'>
-        <SearchBar/>
-        <MovieCard/>
+        <SearchBar searchMovie={searchMovie} setSearchMovie={setSearchMovie} fetchMovieData={fetchMovieData}/>
+        <MovieCard allMovieData={allMovieData} loading={loading}/>
         </div>
         
 
